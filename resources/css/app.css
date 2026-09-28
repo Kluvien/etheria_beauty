@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+:root { --ink: #282321; --rose: #a66362; --rose-dark: #814948; --cream: #f8f3ef; --line: #e6d9d3; --muted: #746965; }
+@theme { --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif; --font-serif: 'Cormorant Garamond', Georgia, serif; }
+body { background: var(--cream); color: var(--ink); }
+.eyebrow { color: var(--rose); font-size: .72rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.display { font-family: var(--font-serif); font-size: clamp(3.5rem, 12vw, 7.4rem); font-weight: 500; line-height: .82; letter-spacing: 0; }
+.btn-primary { background: var(--ink); color: white; transition: transform .2s, background .2s; }
+.btn-primary:hover { background: var(--rose-dark); transform: translateY(-2px); }
+.btn-outline { border: 1px solid var(--ink); transition: background .2s, color .2s; }
+.btn-outline:hover { background: var(--ink); color: white; }
+.fade-in { animation: rise .7s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }

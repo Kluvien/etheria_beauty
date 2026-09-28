@@ -1,0 +1,3 @@
+@extends('layouts.app')
+@section('title', 'Admin login | Etheria Beauty')
+@section('content')<main class="mx-auto max-w-md px-6 py-24"><p class="eyebrow">Admin area</p><h1 class="mt-3 font-serif text-6xl">Welcome back.</h1>@if($errors->any())<p class="mt-6 text-sm text-red-700">{{ $errors->first() }}</p>@endif<form method="POST" action="{{ route('admin.authenticate') }}" class="mt-10 grid gap-5">@csrf<label class="grid gap-2 text-sm font-bold">Email<input type="email" name="email" required class="border-[#e6d9d3] p-4"></label><label class="grid gap-2 text-sm font-bold">Password<input type="password" name="password" required class="border-[#e6d9d3] p-4"></label><button class="btn-primary rounded-full px-6 py-4 font-bold">Log in</button></form></main>@endsection
